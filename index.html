@@ -38,7 +38,7 @@
     <div class="container mt-3 d-flex justify-content-between">
 
       <div>
-        <a class="navbar-brand text-primary" href="http://127.0.0.1:5500">LeadsHunt</a>
+        <a class="navbar-brand text-primary" href="./index.html">LeadsHunt</a>
       </div>
       
       <div class="row d-flex align-items-center justify-content-center">
@@ -483,7 +483,7 @@
                   
                 </ul>
               </div>
-              <button type="button" class="btn btn-primary w-100 p-3">Get it now</button>
+              <button id="freePlanBtn" type="button" class="btn btn-primary w-100 p-3">Get it now</button>
             </div>
           </div>
         </div>
@@ -513,7 +513,7 @@
                           style="font-size:15px;">All founders info & email (~3,000 leads)</span></li>
                 </ul>
               </div>
-              <button type="button" class="btn btn-primary w-100 p-3">Get it now</button>
+              <button id="doneForYouBtn" type="button" class="btn btn-primary w-100 p-3">Get it now</button>
             </div>
           </div>
         </div>
@@ -540,7 +540,7 @@
                       style="font-size:15px;">Weekly updates and reporting</span></li>
                 </ul>
               </div>
-              <button type="button" class="btn btn-primary w-100 p-3">Get it now</button>
+              <button id="doYourSelf" type="button" class="btn btn-primary w-100 p-3">Get it now</button>
             </div>
           </div>
         </div>
@@ -802,6 +802,19 @@
       wrapAround: true,
       fade: true,
       autoPlay: 3000 // 5000 ms = 5 seconds
+    });
+
+    $("#freePlanBtn").on("click", function() {
+    // Este código se ejecutará cuando se haga clic en el botón
+    window.location.href = "https://buttondown.email/freeleadshunt?tag=newuser";
+    });
+    $("#doneForYouBtn").on("click", function() {
+    // Este código se ejecutará cuando se haga clic en el botón
+    window.location.href = "https://buy.stripe.com/eVafZe5CP3wv28EaEP";
+    });
+    $("#doYourSelf").on("click", function() {
+    // Este código se ejecutará cuando se haga clic en el botón
+    window.location.href = "https://airtable.com/shr3RPse1XdRUaoI9";
     });
 
     //--------------------------------Typescript Ends----------------------//                                                
