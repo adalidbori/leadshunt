@@ -22,6 +22,7 @@
 <body>
     
   <!---------------------------------Navigation Starts---------------------------------->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -176,7 +177,7 @@
 
             <div class="card-body">
 
-              <form action="index.php">
+              <form action="/">
                 <input type="text" name="name" id="name" placeholder="Name" class="form-control w-100 border-0 mb-1" required>
                 <hr>
 
@@ -186,7 +187,7 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here your request." required></textarea>
                 <hr>
 
-                <button type="submit" class="btn btn-lg w-100 btn-primary p-2">Submit</button>
+                <button id="sendEmailBtn" type="submit" class="btn btn-lg w-100 btn-primary p-2">Submit</button>
               </form>
 
               
@@ -777,8 +778,8 @@
 
 
   <!--------------------------------------------------------Java scripts Starts------------------------------------------->
+  
   <script>
-
     //--------------------------------Typescript Starts----------------------//
     var typed = new Typed(".type", {
       strings: ['CEO.', "Founder."],
@@ -804,10 +805,11 @@
       autoPlay: 3000 // 5000 ms = 5 seconds
     });
 
-    $("#freePlanBtn").on("click", function() {
-    // Este código se ejecutará cuando se haga clic en el botón
-    window.location.href = "https://buttondown.email/freeleadshunt?tag=newuser";
+    $("#sendEmailBtn").on("click", function() {
+      // Este código se ejecutará cuando se haga clic en el botón
+      sendEmail();
     });
+
     $("#doneForYouBtn").on("click", function() {
     // Este código se ejecutará cuando se haga clic en el botón
     window.location.href = "https://buy.stripe.com/eVafZe5CP3wv28EaEP";
